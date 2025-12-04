@@ -4,7 +4,7 @@ import { FULL_CONTEXT_TEXT } from '../constants';
 export const sendMessageToGemini = async (userMessage: string): Promise<string> => {
   try {
     // Initialize the client inside the function to ensure the API key is available
-    // and to prevent top-level execution issues during build/initialization.
+    // at runtime and to prevent top-level execution issues during build/initialization.
     const ai = new GoogleGenAI({ apiKey: process.env.API_KEY });
 
     const systemInstruction = `

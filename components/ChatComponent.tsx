@@ -34,7 +34,7 @@ const ChatComponent: React.FC = () => {
   };
 
   return (
-    <div className="flex flex-col h-[600px] max-h-[85vh] bg-slate-900 rounded-2xl border border-slate-700 overflow-hidden shadow-2xl">
+    <div className="flex flex-col h-full min-h-[500px] bg-slate-900 rounded-2xl border border-slate-700 overflow-hidden shadow-2xl">
       <div className="bg-slate-800 p-4 border-b border-slate-700 flex items-center gap-3">
         <div className="w-3 h-3 rounded-full bg-brand-accent animate-pulse"></div>
         <h3 className="font-bold text-white">Asistente IA - Módulo 1</h3>
