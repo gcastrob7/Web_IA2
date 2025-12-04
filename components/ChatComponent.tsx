@@ -34,13 +34,13 @@ const ChatComponent: React.FC = () => {
   };
 
   return (
-    <div className="flex flex-col h-[70vh] min-h-[500px] bg-slate-900 rounded-2xl border border-slate-700 overflow-hidden shadow-2xl">
+    <div className="flex flex-col h-[600px] max-h-[85vh] bg-slate-900 rounded-2xl border border-slate-700 overflow-hidden shadow-2xl">
       <div className="bg-slate-800 p-4 border-b border-slate-700 flex items-center gap-3">
         <div className="w-3 h-3 rounded-full bg-brand-accent animate-pulse"></div>
         <h3 className="font-bold text-white">Asistente IA - Módulo 1</h3>
       </div>
 
-      <div className="flex-1 overflow-y-auto p-4 space-y-4 bg-slate-900/50">
+      <div className="flex-1 overflow-y-auto p-4 space-y-4 bg-slate-900/50 scroll-smooth">
         {messages.map((msg, idx) => (
           <div key={idx} className={`flex ${msg.role === 'user' ? 'justify-end' : 'justify-start'}`}>
             <div className={`max-w-[85%] sm:max-w-[75%] rounded-2xl p-4 ${

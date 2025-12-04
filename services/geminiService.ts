@@ -1,10 +1,12 @@
 import { GoogleGenAI } from "@google/genai";
 import { FULL_CONTEXT_TEXT } from '../constants';
 
-const ai = new GoogleGenAI({ apiKey: process.env.API_KEY });
-
 export const sendMessageToGemini = async (userMessage: string): Promise<string> => {
   try {
+    // Initialize the client inside the function to ensure the API key is available
+    // and to prevent top-level execution issues during build/initialization.
+    const ai = new GoogleGenAI({ apiKey: process.env.API_KEY });
+
     const systemInstruction = `
       Eres un asistente experto en Inteligencia Artificial para el sector público, basado específicamente en el material del módulo 'Tipos de IA' de la Universidad de Cartagena.
       
